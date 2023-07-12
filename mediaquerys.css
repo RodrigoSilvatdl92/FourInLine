@@ -1,0 +1,63 @@
+@media(max-width:800px){
+    .tableContainer {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 350px;
+        height: 320px;
+        background-color: rgb(69, 69, 69);
+        display: grid;
+        color: white;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            'a1 a2 a3 a4 a5 a6 a7'
+            'b1 b2 b3 b4 b5 b6 b7'
+            'c1 c2 c3 c4 c5 c6 c7'
+            'd1 d2 d3 d4 d5 d6 d7'
+            'e1 e2 e3 e4 e5 e6 e7'
+            'f1 f2 f3 f4 f5 f6 f7'
+        ;
+        z-index: 8;
+        border-radius: 10px;
+        box-shadow: 10px black;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(0, 0, 0) 0px 8px 5px 8px;
+    
+    }
+
+    .square {
+        width: 41px;
+        height: 54px;
+        position: relative;
+    }
+    
+    
+    .circle {
+        width: 37px;
+        height: 37px;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        border:rgb(69,69,69);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        box-shadow: rgb(0, 0, 0) inset 0px 1px 2px, rgb(0, 0, 0) inset 0px 4px 5px 5px;
+    }
+
+    .winnerDiv {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        max-width: 500px;
+        height: 350px;
+        background-color: rgb(58, 56, 56);
+        border-radius: 10px;
+        z-index: 13;
+    }
+
+}
