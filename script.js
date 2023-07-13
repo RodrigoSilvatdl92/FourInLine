@@ -1,6 +1,4 @@
 "use strict";
-// criamos um array com as condiçoes de vitoria
-// procuras nesse array  com o methodo de array every se algum elemento de cada array pertencente a esse array tem todos os elementos iguais à array das casas do jogador atual, o jogador atual joga e fazes push para cada play .. e nas condiçoes de vitoria fazes forEach(cadaCondição => cadaCondição.every ( se todos sao iguais a valores do jogador.. se for true entao o jogador ganha))
 
 const startContainerEl = document.querySelector(".startContainer");
 const overlayEl = document.querySelector(".overlay");
@@ -210,12 +208,10 @@ const funcPlay = function (clickValue, currentPlayer) {
   }
 };
 
-// fazer jogada e atribuir vencedor
 tableContainerEl.addEventListener("click", function (e) {
   const click = e.target;
   const clickValue = click.getAttribute("value");
 
-  //  carregar na primeira linha de cima para começar a jogar
   if (click.classList.contains("bplay")) {
     if (currentPlayer === 2) {
       console.log("Play not Allowed");
@@ -226,8 +222,6 @@ tableContainerEl.addEventListener("click", function (e) {
         `o jogador em jogo é ${currentPlayer}`,
         arrayCurrentPlayer[`${currentPlayer}`]
       );
-
-      /* condição de valid play ou de fim de jogo */
 
       if (invalidPlay) {
         currentPlayer = currentPlayer === 0 ? 0 : 1;
